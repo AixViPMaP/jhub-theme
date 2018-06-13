@@ -19,4 +19,4 @@ npm install -g less-plugin-clean-css
 
 ## Install
 
-Temporary solution: Copy [css](css) and [components](components), [favicon.ico](favicon.ico) and [images](images)  to JupyterHub static dictory replacing existing files.
+Temporary solution: Copy [css](css) and [components](components), [favicon.ico](favicon.ico) and [images](images) to JupyterHub **static** directory replacing existing files.
