@@ -19,8 +19,7 @@ Compile changes with:
 
 ## Setting up bootstrap
 
-    Copy the 'less' and 'dist' folder from RWTH bootstrap into 'components/bootstrap' and 
-	replace both existing folders
+Copy the 'less' and 'dist' folder from RWTH bootstrap into 'components/bootstrap' and replace both existing folders.
 
 ## Restart Jupyterhub
     Jupyterhub
