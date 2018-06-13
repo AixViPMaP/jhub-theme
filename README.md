@@ -1,27 +1,22 @@
 
-# Jupyterhub Theme
+# JupyterHub Theme
 
-## Requirements
-Less Compiler: lessc
+This theme is based on a custom RWTH Aachen Bootstrap v3 theme which is available [here](https://git.rwth-aachen.de/icmeaix/rwth-bootstrap).
 
-    npm install -g less
-    npm install -g less-plugin-clean-css
+## Build
 
-Download RWTH Bootstrap from https://git.rwth-aachen.de/icmeaix/rwth-bootstrap
+```bash
+lessc less/style.less css/style.css
+lessc --clean-css css/style.css css/style.min.css
+```
 
-## Compile
-Compile changes with:
+lessc is available via npm
 
-    cd ~/jupyterhub/share/jupyterhub/static
-	
-    lessc less/style.less css/style.css
-    lessc --clean-css css/style.css css/style.min.css
+```
+npm install -g less
+npm install -g less-plugin-clean-css
+```
 
-## Setting up bootstrap
+## Install
 
-Copy the 'less' and 'dist' folder from RWTH bootstrap into '~/jupyterhub/share/jupyterhub/static/components/bootstrap/' and replace both existing folders.
-
-## Restart Jupyterhub
-    Jupyterhub
-
-
+Temporary solution: Copy [css](css) and [components](components), [favicon.ico](favicon.ico) and [images](images)  to JupyterHub static dictory replacing existing files.
