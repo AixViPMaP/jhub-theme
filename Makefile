@@ -10,8 +10,13 @@ VAR_LESS:=aixvipmap_variables.less
 PATCH_STYLE_LESS=s/(@import ".\/variables.less";)/\1\n@import ".\/$(VAR_LESS)";/
 
 # Detect jupyterhub version and prefix
-VER:=$(shell python -c 'import jupyterhub as h;print(h.__version__)')
+VER:=$(shell    python -c 'import jupyterhub as h;print(h.__version__)')
 PREFIX:=$(shell python -c 'import sys;print(sys.prefix)')
+
+VER_LT8=$(shell python -c 'print([int(x) for x in "$(VER)".split(".")]>=[0,9,0])')
+ifeq ($(VER_LT8),False)
+  STATIC_DIR:=share/jupyter/hub/static
+endif
 
 .PHONY: install
 
