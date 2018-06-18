@@ -79,11 +79,11 @@
 @gray-light:             lighten(@gray-base, 46.7%); // #777
 @gray-lighter:           lighten(@gray-base, 93.5%); // #eee
 
-@brand-primary:          @blau;
-@brand-success:          @gruen;
-@brand-info:             @tuerkis;
-@brand-warning:          @orange;
-@brand-danger:           @rot;
+@brand-primary:          @blau75;
+@brand-success:          @gruen75;
+@brand-info:             @tuerkis75;
+@brand-warning:          @orange75;
+@brand-danger:           @rot75;
 
 
 //== Scaffolding
@@ -934,7 +934,7 @@
 //** Horizontal line color.
 @hr-border:                   @gray-lighter;
 
-
+// --- JupyterHub ---
 
 @border-radius-small: 2px;
 @border-radius-base: 2px;
@@ -942,5 +942,13 @@
 @navbar-height: 40px;
 @grid-float-breakpoint: @screen-xs-min;
 
-@jupyter-orange: #00549F;
-@jupyter-red: #CC071E;
+@jupyter-orange: @blau75;
+@jupyter-red: @rot75;
+
+@brand-primary: @blau75;
+@brand-success: @gruen75;
+@brand-danger: @rot75;
+
+.btn-jupyter {
+  .button-variant(#fff; @blau75; @blau75);
+}
