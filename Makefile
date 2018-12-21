@@ -1,6 +1,7 @@
 ## Makefile for compilation of JupyterHub CSS files
 #  with a customized `variable.less` file
 #
+#  Copyright 2018 Lukas Koschmieder
 #  Copyright 2018 Mingxuan Lin
 
 JhubGit:=https://github.com/jupyterhub/jupyterhub
@@ -38,3 +39,6 @@ $(SRC)/$(STATIC_DIR)/css:  $(SRC)/$(STATIC_DIR)/less  $(VAR_LESS)
 # Install to system location or Virtual environment
 install: $(SRC)/$(STATIC_DIR)/css
 	cp -r "$<" "$(PREFIX)/$(STATIC_DIR)/"
+	cp "./favicon.ico" "$(PREFIX)/$(STATIC_DIR)/"
+	cp "./jupyter.png" "$(PREFIX)/$(STATIC_DIR)/images/"
+
