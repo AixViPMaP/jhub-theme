@@ -10,6 +10,10 @@ conda install -c conda-forge jupyterhub nodejs
 make install
 ```
 
+### Update
+
+This project should be compiled with source `less` files from the same version of `jupyterhub` as the system-wide installation. After updating `jupyterhub`, checkout this project in a new folder and run `make install` again.
+
 # License
 
 MIT license
